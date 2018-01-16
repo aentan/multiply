@@ -1,0 +1,42 @@
+// Resets
+// Body
+html,
+body {
+  height:                       100%;
+  width:                        100%;
+}
+
+body {
+  margin:                       0;
+  background-color:             $white;
+}
+
+
+// Header
+
+body > header {
+  height:                       448px;
+
+  h1 {
+    width:                      259px;
+    height:                     64px;
+    background-image:           url($svg-multiply-logo);
+    background-size:            contain;
+
+    @include scut-image-replace;
+  }
+
+  @include media(">tablet") {
+    height:                     512px;
+
+    h1 {
+      width:                      320px;
+      height:                     79px;
+    }
+  }
+}
+
+// Main
+
+main {
+}

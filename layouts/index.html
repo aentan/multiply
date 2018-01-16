@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700"> 
+    <link rel="stylesheet" href="/css/{{ index .Site.Data.css.hash "main.css" }}" />
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+  </head>
+  <body class="home">
+
+    <header>
+
+      <h1>{{ .Title }}</h1>
+
+      <p class="intro">We are bunch of passionate makers who believe the shortest route to an idea is getting it done. What we build sits at the intersection of design, technology and social change.</p>
+
+      <div class="share">
+        Share
+      </div>
+
+      <div class="copyright">© 2017 Multiply Ventures</div>
+
+    </header>
+
+    <main>
+
+      <section class="projects">
+
+        <article class="project">
+          <figure>
+            <img src="/img/projects/umbrella.jpg" alt="">
+            <figcaption>
+              <h3>Umbrella</h3>
+              <p>Easy and affordable short term loans at your fingertips.</p>
+              <p class="project-url"><a href="getumbrella.io">getumbrella.io</a></p>
+            </figcaption>
+          </figure>
+        </article>
+
+      </section>
+
+      <section>
+
+
+
+      </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js" type="text/javascript"></script>
+    <script src="/js/{{ index .Site.Data.js.hash "main.js" }}" type="text/javascript"></script>
+
+  </body>
+</html>
