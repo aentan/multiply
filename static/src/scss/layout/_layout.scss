@@ -12,26 +12,103 @@ body {
 }
 
 
+.share {
+  text-align:                   right;
+  text-transform:               uppercase;
+  top:                          32px;
+
+  @include type-caption1();
+  @include pos(12, 25, 12);
+
+  span {
+    display:                    inline-block;
+    line-height:                24px;
+    vertical-align:             middle;
+  }
+
+  a {
+    display:                    inline-block;
+    width:                      24px;
+    height:                     24px;
+    background-size:            contain;
+    background-repeat:          no-repeat;
+    background-position:        50% 50%;
+    vertical-align:             middle;
+    margin-left:                16px;
+
+    @include scut-image-replace;
+  }
+
+  .share-instagram {
+    background-image:           url($svg-instagram);
+  }
+
+  .share-twitter {
+    background-image:           url($svg-twitter);
+  }
+}
+
+
 // Header
 
 body > header {
   height:                       448px;
+  position:                     relative;
 
   h1 {
     width:                      259px;
     height:                     64px;
     background-image:           url($svg-multiply-logo);
     background-size:            contain;
+    position:                   absolute;
+    left:                       15px;
+    top:                        88px;
 
     @include scut-image-replace;
+  }
+
+  .intro {
+    margin-top:                 216px;
+
+    @include pos(23, 25, 1);
+  }
+
+  .copyright {
+    display:                    none;
   }
 
   @include media(">tablet") {
     height:                     512px;
 
     h1 {
-      width:                      320px;
-      height:                     79px;
+      top:                      368px;
+      height:                   0;
+      padding-bottom:           percentage(1/18);
+
+      @include pos(4, 18, 2);
+    }
+
+    .intro {
+      margin-top:               80px;
+      @include grid(6, 18, 10);
+    }
+
+    .share {
+      top:                      48px;
+
+      @include pos(3, 18, 3);
+    }
+
+    .copyright {
+      display:                  block;
+      transform:                rotate(-90deg);
+      transform-origin:         left top;
+      position:                 absolute;
+      left:                     40px;
+      bottom:                   64px;
+      text-transform:           uppercase;
+
+      @include type-caption1();
     }
   }
 }
@@ -39,4 +116,205 @@ body > header {
 // Main
 
 main {
+
+  section {
+    padding-top:                32px;
+    padding-bottom:             64px;
+
+    @include scut-clearfix;
+
+    h2 {
+      color:                    $green;
+      text-transform:           uppercase;
+      margin-top:               0;
+      padding-left:             16px;
+      box-sizing:               border-box;
+    }
+
+    @include media(">tablet") {
+      h2 {
+        text-align:             right;
+
+        @include grid(5, 18, 0);
+      }
+    }
+  }
+
+  .projects {
+
+    padding-top:                0;
+
+    figure {
+      margin:                   0;
+
+      img {
+        width:                  100%;
+        height:                 auto;
+      }
+
+      figcaption {
+        padding:                0 16px;
+      }
+    }
+
+    @include media(">tablet") {
+
+      figure {
+        @include scut-clearfix;
+
+        img {
+          @include grid(12, 18, 0);
+        }
+
+        figcaption {
+          padding:              0 32px;
+          box-sizing:           border-box;
+
+          @include grid(6, 18, 0);
+
+          h3 {
+            margin-top:         0;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .people {
+
+    .person {
+      position:                 relative;
+      box-sizing:               border-box;
+
+      @include scut-clearfix;
+
+      img {
+        float:                  left;
+        width:                  96px;
+        height:                 96px;
+        margin-right:           16px;
+      }
+
+      .person-info {
+
+        margin:                 0 16px;
+
+        h3 {
+          margin:               0;
+          @include type-body2();
+          font-weight:          $type-weight-bold;
+        }
+
+        p {
+          margin:               0;
+        }
+      }
+
+    }
+
+    .person-naresh {
+      img {
+        margin-bottom:          16px;
+      }
+    }
+
+    @include media(">tablet") {
+
+      @include grid(12, 18, 1);
+
+      .person {
+
+        img {
+          width:                128px;
+          height:               128px;
+          margin-right:         32px;
+          margin-bottom:        0;
+        }
+
+        .person-info {
+          padding-left:         160px;
+          margin:               0;
+        }
+      }
+
+      .person-valli {
+        margin-left:            percentage(2/12);
+      }
+
+      .person-ricky {
+        margin-left:            percentage(2/16);
+        text-align:             right;
+        padding-right:          160px;
+        box-sizing:             border-box;
+
+        img {
+          position:             absolute;
+          right:                0;
+          margin-left:          32px;
+          margin-right:         0;
+        }
+      }
+
+      .person-naresh {
+        width:                  percentage(8/12);
+      }
+
+    }
+
+    @include media(">desktop") {
+
+      .person {
+        width:                  percentage(6/12);
+      }
+
+      .person-ricky {
+        margin-left:            percentage(4/16);
+      }
+
+      .person-naresh {
+        width:                  percentage(8/12);
+      }
+
+    }
+
+  }
+
+  .contact {
+
+    position:                   relative;
+    padding-bottom:             64px;
+
+    [class^="contact"] {
+      margin-bottom:            32px;
+    }
+
+    @include media(">tablet") {
+
+      padding-bottom:             160px;
+
+      [class^="contact"] {
+        margin-bottom:          0;
+      }
+
+      .contact-human {
+        text-align:             right;
+
+        @include grid(6, 18, 0);
+      }
+
+      .contact-email {
+        @include grid(7, 18, 6);
+      }
+
+    }
+
+    .share {
+      top:                      240px;
+    }
+
+  }
+
 }

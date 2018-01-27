@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,700"> 
     <link rel="stylesheet" href="/css/{{ index .Site.Data.css.hash "main.css" }}" />
     {{ if .RSSLink }}
     <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -19,10 +19,12 @@
 
       <h1>{{ .Title }}</h1>
 
-      <p class="intro">We are bunch of passionate makers who believe the shortest route to an idea is getting it done. What we build sits at the intersection of design, technology and social change.</p>
+      <p class="intro lead">We are bunch of passionate makers who believe the shortest route to an idea is getting it done. What we build sits at the intersection of design, technology and social change.</p>
 
       <div class="share">
-        Share
+        <span>Share</span>
+        <a href="#" class="share-instagram">Instagram</a>
+        <a href="#" class="share-twitter">Twitter</a>
       </div>
 
       <div class="copyright">© 2017 Multiply Ventures</div>
@@ -35,7 +37,7 @@
 
         <article class="project">
           <figure>
-            <img src="/img/projects/umbrella.jpg" alt="">
+            <img src="/img/projects/umbrella.jpg" alt="Umbrella">
             <figcaption>
               <h3>Umbrella</h3>
               <p>Easy and affordable short term loans at your fingertips.</p>
@@ -46,9 +48,74 @@
 
       </section>
 
-      <section>
+      <section class="team">
 
+        <h2>Team</h2>
 
+        <div class="people">
+
+          <div class="person person-valli">
+            <img src="/img/team/valli.jpg" alt="Valli">
+            <div class="person-info">
+              <h3>Valli Lakshmanan</h3>
+              <p>CEO</p>
+            </div>
+          </div>
+
+          <div class="person person-ricky">
+            <img src="/img/team/ricky.jpg" alt="Ricky">
+            <div class="person-info">
+              <h3>Ricky Mohan</h3>
+              <p>CTO</p>
+            </div>
+          </div>
+
+          <div class="person person-aen">
+            <img src="/img/team/aen.jpg" alt="Aen">
+            <div class="person-info">
+              <h3>Aen Tan</h3>
+              <p>Advisor</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="investors">
+
+        <h2>Investors</h2>
+
+        <div class="people">
+
+          <div class="person person-naresh">
+            <img src="/img/team/naresh.jpg" alt="Naresh">
+            <div class="person-info">
+              <h3>Naresh Bangia</h3>
+              <p>Naresh is the CEO and founder of AJB Software Design Inc., which was sold to Verifone (NYSE: PAY).  AJB was a Toronto-based provider of payment gateway and switching solutions with over 150 large retail customers, including half a million connected payment devices.</p>
+              <p>An engineering science graduate from the University of Toronto, Naresh has been a lifelong entrepreneur and is currently active in providing value-adding capital to early-stage companies and their entrepreneurs.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="contact">
+
+        <div class="contact-human">
+          <a href="#" class="cta">Talk to a Human</a>
+        </div>
+
+        <div class="contact-email">
+          <a href="#" class="cta">Send an Email</a>
+        </div>
+
+        <div class="share">
+          <span>Share</span>
+          <a href="#" class="share-instagram">Instagram</a>
+          <a href="#" class="share-twitter">Twitter</a>
+        </div>
 
       </section>
 

@@ -1,47 +1,4 @@
-@mixin type-displaylll() {
-  font-family    : $type-heading-family;
-  font-size      : $type-displaylll-size;
-  font-weight    : $type-displaylll-weight;
-  letter-spacing : $type-displaylll-letter-spacing;
-  line-height    : $type-displaylll-line-height;
-  color          : $black;
-}
-
-@mixin type-displayll() {
-  font-family    : $type-heading-family;
-  font-size      : $type-displayll-size;
-  font-weight    : $type-displayll-weight;
-  letter-spacing : $type-displayll-letter-spacing;
-  line-height    : $type-displayll-line-height;
-  color          : $black;
-}
-
-@mixin type-displayl() {
-  font-family    : $type-heading-family;
-  font-size      : $type-displayl-size;
-  font-weight    : $type-displayl-weight;
-  letter-spacing : $type-displayl-letter-spacing;
-  line-height    : $type-displayl-line-height;
-  color          : $black;
-}
-
-@mixin type-displaym() {
-  font-family    : $type-heading-family;
-  font-size      : $type-displaym-size;
-  font-weight    : $type-displaym-weight;
-  letter-spacing : $type-displaym-letter-spacing;
-  line-height    : $type-displaym-line-height;
-  color          : $black;
-}
-
-@mixin type-displays() {
-  font-family    : $type-heading-family;
-  font-size      : $type-displays-size;
-  font-weight    : $type-displays-weight;
-  letter-spacing : $type-displays-letter-spacing;
-  line-height    : $type-displays-line-height;
-  color          : $black;
-}
+// Typography
 
 @mixin type-headline() {
   font-family    : $type-base-family;
@@ -67,30 +24,6 @@
   line-height    : $type-body-line-height;
 }
 
-@mixin type-callout() {
-  font-family    : $type-base-family;
-  font-size      : $type-callout-size;
-  font-weight    : $type-callout-weight;
-  letter-spacing : $type-callout-letter-spacing;
-  line-height    : $type-callout-line-height;
-}
-
-@mixin type-subhead() {
-  font-family    : $type-base-family;
-  font-size      : $type-subhead-size;
-  font-weight    : $type-subhead-weight;
-  letter-spacing : $type-subhead-letter-spacing;
-  line-height    : $type-subhead-line-height;
-}
-
-@mixin type-note() {
-  font-family    : $type-base-family;
-  font-size      : $type-note-size;
-  font-weight    : $type-note-weight;
-  letter-spacing : $type-note-letter-spacing;
-  line-height    : $type-note-line-height;
-}
-
 @mixin type-caption1() {
   font-family    : $type-base-family;
   font-size      : $type-caption1-size;
@@ -99,10 +32,17 @@
   line-height    : $type-caption1-line-height;
 }
 
-@mixin type-caption2() {
-  font-family    : $type-base-family;
-  font-size      : $type-caption2-size;
-  font-weight    : $type-caption2-weight;
-  letter-spacing : $type-caption2-letter-spacing;
-  line-height    : $type-caption2-line-height;
+
+// Grid
+
+@mixin grid($col, $sum, $push) {
+  width          : round-to(percentage($col/$sum), 3, floor);
+  float          : left;
+  margin-left    : round-to(percentage($push/$sum), 3, floor);
+}
+
+@mixin pos($col, $sum, $push) {
+  width          : round-to(percentage($col/$sum), 2, floor);
+  position       : absolute;
+  left           : round-to(percentage($push/$sum), 2, floor);
 }
