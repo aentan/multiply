@@ -5,6 +5,10 @@ html {
 body {
   @include type-body();
   color : $gray-darker;
+  font-feature-settings: "tnum", "pnum" off;
+  font-feature-settings: "lnum", "onum" off;
+  font-feature-settings: "salt";
+  font-feature-settings: "c2sc";
 }
 
 .lead {
@@ -21,6 +25,8 @@ h2 {
 
 h3 {
   @include type-headline();
+  letter-spacing: 0;
+  font-weight: $type-weight-bold;
 }
 
 h4 {
